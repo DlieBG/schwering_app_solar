@@ -1,0 +1,46 @@
+.body {
+    height: 100%;
+}
+
+h3 {
+    margin-bottom: .5em;
+    font-weight: 400;
+    color: #f799c9;
+}
+
+.values {
+    height: calc(100% - 36px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
+}
+
+span {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: .125em;
+}
+
+i {
+    font-size: small;
+    font-weight: 400;
+    color: #a1a1a1;
+}
+
+.mood {
+    scale: 1.25;
+    color: orange;
+}
+
+.battery {
+    vertical-align: sub;
+    color: forestgreen;
+}

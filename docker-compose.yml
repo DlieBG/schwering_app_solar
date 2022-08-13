@@ -23,6 +23,6 @@ services:
     container_name: schwering_app_solar_watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: schwering_app_solar_frontend schwering_app_solar_frontend -i 3600 --scope schwering_app_solar
+    command: schwering_app_solar_frontend schwering_app_solar_backend -i 3600 --scope schwering_app_solar
     labels:
       - "com.centurylinklabs.watchtower.scope=schwering_app_solar"

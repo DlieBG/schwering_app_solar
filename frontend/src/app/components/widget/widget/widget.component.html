@@ -1,44 +1,50 @@
 <div class="body">
     <h3>Stromübersicht</h3>
 
-    <div class="values">
+    <div class="values" *ngIf="senecData">
 
-        <div class="value">
-            <span>650 W</span>
-            <i>Verbrauch</i>
+        <app-value class="value"
+            [value]="senecData.house_power"
+            suffix="W"
+            name="Verbrauch"
+        ></app-value>
+
+        <app-mood class="value"
+            [goodConditions]="[senecData.battery_power >= 0, senecData.grid_power < 0]"
+        ></app-mood>
+
+        <app-value class="value"
+            [value]="senecData.solar_power"
+            suffix="W"
+            name="Erzeugung"
+        ></app-value>
+
+        <app-icon-value class="value"
+            [value]="senecData.battery_power"
+            suffix="W"
+            [positiveIcons]="['arrow_forward', 'battery_charging_full']"
+            [negativeIcons]="['arrow_back', 'battery_full']"
+            positiveColor="forestgreen"
+            negativeColor="crimson"
+        ></app-icon-value>
+
+        <app-battery class="value"
+            [value]="senecData.battery_fuel"
+        ></app-battery>
+
+        <app-icon-value class="value"
+            [value]="senecData.grid_power"
+            suffix="W"
+            [positiveIcons]="['arrow_back', 'public']"
+            [negativeIcons]="['arrow_forward', 'public']"
+            positiveColor="crimson"
+            negativeColor="forestgreen"
+        ></app-icon-value>
+    </div>
+
+    <div class="loading" *ngIf="!senecData">
+        <div class="loader">
+            <mat-spinner color="accent" diameter="50"></mat-spinner>
         </div>
-
-        <div class="value">
-            <!-- <mat-icon class="mood">mood</mat-icon> -->
-            <mat-icon class="mood">sentiment_neutral</mat-icon>
-            <!-- <mat-icon>mood_bad</mat-icon> -->
-            <mat-icon>
-                signal_cellular_2_bar
-            </mat-icon>
-        </div>
-
-        <div class="value">
-            <span>3.500 W</span>
-            <i>Erzeugung</i>
-            
-        </div>
-
-        <div class="value">
-            <span>65 W</span>
-            <i>Erzeugung</i>
-        </div>
-
-        <div class="value">
-            <span>
-                <mat-icon class="battery">battery_6_bar</mat-icon>
-                85 %
-            </span>
-        </div>
-
-        <div class="value">
-            <span>65 W</span>
-            <i>Erzeugung</i>
-        </div>
-
     </div>
 </div>

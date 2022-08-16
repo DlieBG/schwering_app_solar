@@ -1,0 +1,17 @@
+<div class="icon-value">
+    <span *ngIf="value < 0 ? -value : value as value">
+        {{ value | number: '1.0-0':'de' }} {{ suffix }}
+    </span>
+
+    <div class="icons" [style.color]="positiveColor" *ngIf="value > 0">
+        <mat-icon *ngFor="let icon of positiveIcons">{{ icon }}</mat-icon>
+    </div>
+
+    <div class="icons" [style.color]="negativeColor" *ngIf="value < 0">
+        <mat-icon *ngFor="let icon of negativeIcons">{{ icon }}</mat-icon>
+    </div>
+
+    <div class="icons" *ngIf="value == 0">
+        <mat-icon>remove</mat-icon>
+    </div>
+</div>

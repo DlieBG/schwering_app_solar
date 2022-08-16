@@ -1,0 +1,21 @@
+.mood {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mat-icon {
+    scale: 1.25;
+}
+
+.happy {
+    color: forestgreen;
+}
+
+.neutral {
+    color: orange;
+}
+
+.sad {
+    color: crimson;
+}

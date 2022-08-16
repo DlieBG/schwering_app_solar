@@ -1,4 +1,4 @@
-.value {
+.icon-value {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,8 +10,7 @@ span {
     margin-bottom: .125em;
 }
 
-i {
-    font-size: small;
-    font-weight: 400;
+.icons {
+    scale: .9;
     color: #a1a1a1;
 }

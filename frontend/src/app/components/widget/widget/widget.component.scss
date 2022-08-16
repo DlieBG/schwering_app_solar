@@ -17,30 +17,18 @@ h3 {
 }
 
 .value {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 33.33%;
 }
 
-span {
-    font-size: 1.5em;
-    font-weight: 400;
-    margin-bottom: .125em;
+.loading {
+    height: calc(100% - 36px);
 }
 
-i {
-    font-size: small;
-    font-weight: 400;
-    color: #a1a1a1;
-}
-
-.mood {
-    scale: 1.25;
-    color: orange;
-}
-
-.battery {
-    vertical-align: sub;
-    color: forestgreen;
+.loader {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
 }

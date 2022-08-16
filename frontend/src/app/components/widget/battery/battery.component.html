@@ -1,1 +1,6 @@
-<p>battery works!</p>
+<div class="battery">
+    <span>
+        <mat-icon class="icon" [style.color]="getColor()">{{ getIcon() }}</mat-icon>
+        {{ value }} %
+    </span>
+</div>

@@ -1,1 +1,5 @@
-<p>mood works!</p>
+<div class="mood">
+    <mat-icon class="happy" *ngIf="isHappy()">mood</mat-icon>
+    <mat-icon class="neutral" *ngIf="isNeutral()">sentiment_neutral</mat-icon>
+    <mat-icon class="sad" *ngIf="isSad()">mood_bad</mat-icon>
+</div>

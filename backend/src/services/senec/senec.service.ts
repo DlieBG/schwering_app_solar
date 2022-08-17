@@ -59,12 +59,13 @@ export class SenecService {
         this.getSenecData()
             .subscribe(
                 (senecData) => {
-                    this.dbService
-                        .getCollection('senec')
-                        .insertOne({
-                            date: new Date(),
-                            ...senecData
-                        });
+                    if(!process.env.DEV)
+                        this.dbService
+                            .getCollection('senec')
+                            .insertOne({
+                                date: new Date(),
+                                ...senecData
+                            });
                 }
         );
     }

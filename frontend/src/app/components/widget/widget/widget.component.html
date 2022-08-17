@@ -16,12 +16,14 @@
         <app-value class="value"
             [value]="senecData.solar_power"
             suffix="W"
+            [gauge]="7500"
             name="Erzeugung"
         ></app-value>
 
         <app-icon-value class="value"
             [value]="senecData.battery_power"
             suffix="W"
+            [gauge]="2500"
             [positiveIcons]="['arrow_forward', 'battery_charging_full']"
             [negativeIcons]="['arrow_back', 'battery_full']"
             positiveColor="forestgreen"

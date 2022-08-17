@@ -9,6 +9,7 @@ export class IconValueComponent implements OnInit {
 
   @Input() value!: number;
   @Input() suffix!: string;
+  @Input() gauge!: number;
   @Input() positiveIcons!: string[];
   @Input() negativeIcons!: string[];
   @Input() positiveColor!: string;

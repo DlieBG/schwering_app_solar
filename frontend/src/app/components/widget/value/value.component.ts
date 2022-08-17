@@ -9,6 +9,7 @@ export class ValueComponent implements OnInit {
 
   @Input() value!: number;
   @Input() suffix!: string;
+  @Input() gauge!: number;
   @Input() name!: string;
 
   constructor() { }

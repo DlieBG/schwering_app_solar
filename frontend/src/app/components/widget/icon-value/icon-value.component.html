@@ -3,6 +3,12 @@
         {{ value | number: '1.0-0':'de' }} {{ suffix }}
     </span>
 
+    <app-gauge class="gauge"
+        [value]="value"
+        [max]="gauge"
+        *ngIf="gauge"
+    ></app-gauge>
+
     <div class="icons" [style.color]="positiveColor" *ngIf="value > 0">
         <mat-icon *ngFor="let icon of positiveIcons">{{ icon }}</mat-icon>
     </div>

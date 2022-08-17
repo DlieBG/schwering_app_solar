@@ -1,4 +1,11 @@
 <div class="value">
     <span>{{ value | number: '1.0-0':'de' }} {{ suffix }}</span>
+    
+    <app-gauge class="gauge"
+        [value]="value"
+        [max]="gauge"
+        *ngIf="gauge"
+    ></app-gauge>
+
     <i>{{ name }}</i>
 </div>

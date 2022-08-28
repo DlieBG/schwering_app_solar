@@ -2,7 +2,7 @@ import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { Cron, CronExpression, Interval } from '@nestjs/schedule';
 import { map, Observable, tap } from 'rxjs';
-import { SenecData } from 'src/types/senec.type';
+import { SenecData } from '../../types/senec.type';
 import { DbService } from '../db/db.service';
 
 @Injectable()

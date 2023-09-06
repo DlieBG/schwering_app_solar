@@ -18,7 +18,7 @@ export class SenecService {
     getSenecData(): Observable<SenecData> {
         return this.httpService
             .post(
-                `http://${process.env.SENEC_ADDRESS}/dashboard`, 
+                `https://${process.env.SENEC_ADDRESS}/dashboard`, 
                 {
                     'ENERGY': {
                         'GUI_BAT_DATA_FUEL_CHARGE': '',
@@ -27,6 +27,9 @@ export class SenecService {
                         'GUI_HOUSE_POW': '',
                         'GUI_GRID_POW': ''
                     }
+                },
+                {
+                    
                 }
             )
             .pipe(
